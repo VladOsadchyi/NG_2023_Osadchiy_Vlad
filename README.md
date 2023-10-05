@@ -1,1 +1,0 @@
-# NG_2023_Osadchiy_Vlad
