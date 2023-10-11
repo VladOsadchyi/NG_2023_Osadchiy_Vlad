@@ -1,4 +1,3 @@
-# Введення трьох чисел у масив
 user_input = input("Enter three numbers separated by spaces: ")
 list_with_numbers = [float(number) for number in user_input.split()]
 if len(list_with_numbers ) != 3:
