@@ -9,4 +9,4 @@ for i in your_list:
         result+=main_alfavit[newpos]
     else:
         result+=i
-print("=======================", '\n', result)
+print("-"*30, '\n', result)
