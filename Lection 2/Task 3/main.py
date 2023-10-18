@@ -1,9 +1,9 @@
 your_number=int(input("Enter your number: "))
 print("Number   | Dividers|   Simple?")
-for i in range(1, your_number + 1):
-    divisors = [str(j) for j in range(1, i + 1) if i % j == 0]
-    prime = "Yes" if all(i % j != 0 for j in range(2, i)) else "No"
-    print(f"{i} | {', '.join(divisors)} | {prime}")
-prime_numbers = [i for i in range(1, your_number + 1) if all(i % j != 0 for j in range(2, i)) and i > 1]
+for el in range(1, your_number + 1):
+    divisors = [str(div) for div in range(1, el + 1) if el % div == 0]
+    prime = "Yes" if all(el % div != 0 for div in range(2, el)) else "No"
+    print(f"{el} | {', '.join(divisors)} | {prime}")
+prime_numbers = [el for el in range(1, your_number + 1) if all(el % div != 0 for div in range(2, el)) and el > 1]
 print("-"*30)
 print("\nSimple numbers:", prime_numbers)
