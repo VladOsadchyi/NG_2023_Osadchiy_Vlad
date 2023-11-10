@@ -2,13 +2,11 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# Начальные координаты игрока
 player_x = 2
 player_y = 2
 max_x = 10
 max_y = 10
 
-# Размер поля
 field_size = 10
 
 @app.route('/')
