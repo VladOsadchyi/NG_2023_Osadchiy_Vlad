@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        td.player {
+          
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Game</h1>
+    <table>
+        {% for row in range(field_size) %}
+    <tr>
+        {% for col in range(field_size) %}
+        <td id="{{ row }}-{{ col }}" {% if player_x == col and player_y == row %}class="player"{% endif %}>
+            {% if player_x == col and player_y == row %}
+                🐕
+            {% else %}
+                .
+            {% endif %}
+        </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </table>
+    <br>
+    <button onclick="window.location.href='{{ url_for('move', direction='Up') }}'">Up</button>
+    <button onclick="window.location.href='{{ url_for('move', direction='Down') }}'">Down</button>
+    <button onclick="window.location.href='{{ url_for('move', direction='Left') }}'">Left</button>
+    <button onclick="window.location.href='{{ url_for('move', direction='Right') }}'">Right</button>
+</body>
+</html>
